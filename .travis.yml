@@ -1,8 +1,12 @@
-language: python
-python:
-  - 3.4
-  - 3.5
-  - 3.6
+matrix:
+  include:
+    - language: python
+      python: 3.6
+      install: echo No dependencies for python.
+      script: python -m unittest
+    - language: node_js
+      node_js: node
+      script: echo No tests for nodejs.
 
 branches:
   only:
