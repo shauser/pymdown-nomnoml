@@ -7,7 +7,7 @@ from base64 import b64encode
 def fence_nomnoml_svg_b64(source, language, css_class):
     """Format pymdown_nomnoml as svg (requires helper)"""
 
-    path = os.path.realpath(os.path.join(__file__, '..', '..', 'js', 'pymdown_nomnoml.js'))
+    path = os.path.realpath(os.path.join(__file__, '..', 'js', 'pymdown_nomnoml.js'))
 
     p = run(['node', path], stdout=PIPE, input=source, encoding='utf-8')
     svg = p.stdout.encode('utf-8')

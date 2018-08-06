@@ -28,5 +28,8 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7'
     ],
-    packages=find_packages()
+    packages=find_packages(),
+    package_data={
+        'pymdown_nomnoml': ['js/pymdown_nomnoml.js']
+    }
 )
