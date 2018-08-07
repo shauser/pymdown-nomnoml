@@ -20,8 +20,8 @@ Enable the extension in your `mkdocs.yml`:
 markdown_extensions:
     - pymdownx.superfences:
         custom_fences:
-            - name: pymdown_nomnoml
-              class: pymdown_nomnoml-diagram
+            - name: nomnoml
+              class: nomnoml-diagram
               format: !!python/name:pymdown_nomnoml.fence_nomnoml_svg_b64
 ```
 
@@ -38,7 +38,19 @@ You can now use the nomnoml extension like this:
     [b] -> [c]
     ```
     
-When building, the code block will be replaced by an SVG version of the diagram. Note that there are some limitations of the SVG renderer.
+When building, the code block will be replaced by an SVG version of the diagram.
+
+## Limitations
+
+Note that there are some known limitations of the SVG renderer and it is considered experimental by the nomnoml author. The alternatives to the SVG renderer are:
+
+- PNG renderer: This requires canvas support in nodejs, which is [has some prerequisites](node-canvas-requirements). I'm planning to add support for this for version 1.0.
+- Canvas renderer: This embeds the nomnoml JavaScript library in the HTML and renders it at runtime. This will work, unless you want to print the document or export to PDF. I'm planning to add support for this for version 1.0.
+
+The known limitations for the SVG renderer (this list is probably not exhaustive):
+
+- Dashed and dotted lines are rendered solid
+- Line rounding in corners is not implemented
 
 ## Contributing
 
@@ -52,4 +64,5 @@ If you want to contribute to the code of this project, please read the [Contribu
 [nomnoml]: https://github.com/skanaar/nomnoml
 [playground]: http://www.nomnoml.com/
 [nodejs]: https://nodejs.org/
+[node-canvas-requirements]: https://github.com/Automattic/node-canvas/wiki/_pages
 [contributing]: CONTRIBUTING.md
