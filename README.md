@@ -2,9 +2,11 @@
 
 *A PyMdown extension to render pymdown_nomnoml diagrams*
 
-The pymdown_nomnoml extension will render any [superfence](superfences) using [pymdown_nomnoml](pymdown_nomnoml) into an SVG image. This provides a simple way to add diagrams in your documentation files in a readable syntax.
+The pymdown_nomnoml extension will render any [superfence](superfences) using [nomnoml](nomnoml) into an SVG image. This provides a simple way to add diagrams in your documentation files in a readable syntax. You can also start [playing around](playground) with nomnoml before installing.
 
 ## Installation
+
+Since nomnoml itself is written in JavaScript, you need to have [NodeJS](nodejs) installed on your system.
 
 Install the package with pip:
 
@@ -43,7 +45,11 @@ When building, the code block will be replaced by an SVG version of the diagram.
 From reporting a bug to submitting a pull request: every contribution is appreciated and welcome. Report bugs, ask questions and request features using [Github issues][github-issues].
 If you want to contribute to the code of this project, please read the [Contribution Guidelines][contributing].
 
-[travis-status]: https://travis-ci.org/shauser/pymdown-pymdown_nomnoml.svg?branch=master
-[travis-link]: https://travis-ci.org/shauser/pymdown-pymdown_nomnoml
-[github-issues]: https://github.com/shauser/pymdown-pymdown_nomnoml/issues
+[travis-status]: https://travis-ci.org/shauser/pymdown-nomnoml.svg?branch=master
+[travis-link]: https://travis-ci.org/shauser/pymdown-nomnoml
+[github-issues]: https://github.com/shauser/pymdown-nomnoml/issues
+[superfences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
+[nomnoml]: https://github.com/skanaar/nomnoml
+[playground]: http://www.nomnoml.com/
+[nodejs]: https://nodejs.org/
 [contributing]: CONTRIBUTING.md
