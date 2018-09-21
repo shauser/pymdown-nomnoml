@@ -11,7 +11,7 @@ Since nomnoml itself is written in JavaScript, you need to have [NodeJS](nodejs)
 Install the package with pip:
 
 ```bash
-pip install pymdown-pymdown_nomnoml
+pip install pymdown-nomnoml
 ```
 
 Enable the extension in your `mkdocs.yml`:
